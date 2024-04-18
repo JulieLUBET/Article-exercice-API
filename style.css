@@ -1,0 +1,145 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  cursor: url("./images/sourisN.png"), auto;
+}
+
+body {
+  background-color: rgb(165, 165, 165);
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+}
+
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 200%;
+}
+
+img {
+  width: 20%;
+}
+
+#header {
+  width: 90%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  /*flex pour centrer le titre dans la section*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("./images/souris.png"), auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+div {
+  padding: 5%;
+  margin: 1%;
+}
+
+div p {
+  overflow-y: auto;
+  font-size: 150%;
+  padding: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  grid-column-gap: 19px;
+  grid-row-gap: 19px;
+}
+
+.posts-container{
+  border-radius: 10px;
+  margin: 5%;
+  color: white;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgb(114, 114, 114) 0%, rgb(0, 0, 0) 100%);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.409);
+}
+
+.posts-container:hover {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(87, 87, 87) 100%);
+  color: black;
+}
+
+.overflow-y-scroll {
+  scrollbar-color: rgb(0, 0, 0) rgb(143, 143, 143);
+}
+
+/*  -------   remonter en haut    -------  */
+
+a {
+  text-decoration: none; /* enlever le soulignage des liens*/
+  color: rgb(0, 0, 0);
+  display: block; /* Utiliser "block" au lieu de "inline-block" pour le centrage */
+  text-align: center; /* Centrer le texte */
+  margin: 0 auto; /* Centrer horizontalement */
+  width: fit-content; /* Ajuster la largeur en fonction du contenu */
+}
+
+html {
+  scroll-behavior: smooth; /* permet de voir la remonter */
+}
+
+@media screen and (min-width: 600px) {
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
+  div p {
+    height: 2em; /* Limite le conteneur à deux lignes */
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  h1 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 150%;
+  }
+  div p {
+    font-size: 100%;
+  }
+
+}
+
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 100%;
+  }
+  div p {
+    font-size: 50%;
+  }
+  .parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 100%;
+  }
+  div p {
+    font-size: 50%;
+  }
+  .parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
